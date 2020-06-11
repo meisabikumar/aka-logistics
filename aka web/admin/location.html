@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LOCATION</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Request Live location of your product</h2>
+  
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name" required="" >
+    </div>
+    
+   
+    
+
+     <div class="form-group">
+      <label for="pwd">phone:</label>
+      <input type="text" class="form-control" id="pwd" placeholder="Enter phone no." name="pwd" required="" >
+    </div>
+    <button onclick="b()">NOTIFY TO GET THE LOCATION</button>
+    
+  
+</div>
+<script type="text/javascript">
+   
+function b()
+{
+  var asd=document.getElementById("pwd").value;
+var bsd=document.getElementById("name").value;
+
+  const cnum1=6361666743;
+  const cnum2=9431305864;
+  const cnum3=8094113042;        
+  window.location='https://www.fast2sms.com/dev/bulk?authorization=OANVA8a8mmlMor3QEgyKhFVk9yDydRXDyl2bV5fAmEIhDxFs7XI9FroH8rwx&sender_id=AKAlog&language=english&route=qt&numbers='+cnum1+','+cnum2+','+cnum3+'&message=18775&variables={DD}|{CC}&variables_values='+bsd+'|'+asd;
+        target = "_blank";
+
+}
+
+
+</script>
+
+</body>
+</html>

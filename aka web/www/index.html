@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head><title>LOCATION APP</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+</style>
+<body class="w3-theme-l5">
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>AKA LOGISTICS</a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-globe"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+      <a href="#" class="w3-bar-item w3-button">CONSIGNMENT 1</a>
+      <a href="#" class="w3-bar-item w3-button">CONSIGNMENT 2</a>
+      <a href="#" class="w3-bar-item w3-button">CONSIGNMENT 3</a>
+    </div>
+  </div>
+
+ </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+</div>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center">My Profile</h4>
+         <p class="w3-center"><img src="img/a.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+         <hr>
+         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> EMPLOYEE</p>
+         <p>AKA LOGISTICS</p>
+         
+         
+        </div>
+      </div>
+      <br>
+      
+     
+      
+     
+      
+      <!-- Alert Box -->
+      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
+          <i class="fa fa-remove"></i>
+        </span>
+        <p><strong>Hey!</strong></p>
+        <p>YOU GOT A NOTIFICATION.</p>
+      </div>
+    
+    <!-- End Left Column -->
+    </div>
+    
+    <!-- Middle Column -->
+    <div class="w3-col m7">
+    
+      <div class="w3-row-padding">
+        <div class="w3-col m12">
+          <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding">
+             
+              <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  INTERFACE</button> 
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <img src="img/b.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">1 min</span>
+        <h4>CONSIGNMENT 1</h4><br>
+        <hr class="w3-clear">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+<div class="contentcontainer">
+  
+  
+  <h1>SEND REAL-TIME LOCATION TO USER</h1>
+  <br>
+  <div>
+    <center><button onclick="getLocation()" class="btn btn-primary" >GET COORDINATES</button></center>
+  </div><br>
+  <form name="target" id="target" class="create-form">    
+    <center><input type="text" id="url" title="#url" ><br></center>
+    <hr>
+    
+    <b>make tiny:</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <input type="text" id="ourl" title="#ourl">
+    
+   &nbsp;&nbsp;&nbsp; <input id="submit" title="#submit" type="button" class="btn btn-info" value="Make TinyURL!"><br>
+    <img parent="#ourl" class="copy" />
+    
+  </form>
+<label>Customer mobile no:</label>
+
+    <input type="number" id="num" name="n" value="value">
+    &nbsp;&nbsp;&nbsp;<button onclick="a() " class="btn btn-success" >Send the Location</button>
+
+</div>
+  
+    <!-- End Middle Column -->
+    </div>
+    
+    <!-- Right Column -->
+    
+   
+      </div>
+     
+      <br>
+      
+      
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+<!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+ 
+</footer>
+
+<footer class="w3-container w3-theme-d5">
+  <center><p>Powered by AKA LOGISTICS</p></center>
+</footer>
+<script>
+ var url = $("#url"), ourl = $("#ourl"), purl = $("#purl"), submit = $("#submit");
+  submit.click(() => {
+    tinyurl(url.val(), () => {
+      ourl.val(tinyurl.url);
+      purl.val(tinyurl.preview);
+    });
+  });
+  $("img.copy").click((img) => {
+    var text = $(img.target.getAttribute("parent")).select()[0].innerText;
+    try {
+      alert("The text was " + (document.execCommand("copy", false, text)? "": "not ") + "copied to the clipboard.");
+    } catch(e) {
+      alert("The text cannot be copied to the clipboard.");
+    }
+  });
+</script>
+<script type="text/javascript">
+  
+  /* TinyURL JS API
+  @author: Ephellon Dantzler
+  @timestamp: Sunday August 13, 2017 02:04:32 CST (-06:00)
+*/
+// JavaScript Emulation from "1.8.5" to "1.3"
+
+// C -> XRequest
+
+function ProperURL__String(url) {
+  if(ProperURL.test(url))
+    return new URL(url);
+  try {
+    // Missing protocol
+    if(/([\w]+)\.([\w]+)(\/.+)?$/i.test(url))
+      return new URL('http://' + RegExp.$_);
+  } catch(error) {
+    throw new URIError("Failed to construct 'URL': Invalid URL");
+  }
+};
+
+ProperURL.test = function test(url) {
+  try {
+    new URL(url);
+  } catch(error) {
+    return false;
+  }
+  return true;
+};
+
+function tinyurl__Object_Function(options, callback) {
+  var head = "https://www.tinyurl.com/api-create.php?url=",
+      url = head + encodeURIComponent(options.url),
+      start, end, count, fetching,
+      timeout = options.timeout;
+  tinyurl.callback = callback;
+
+  if((timeout != undefined && timeout != null)) {
+    start = (new Date).getTime();
+    XRequest(options, callback);
+    for(
+      count = 0, end = start + (timeout * 1000), fetching = true;
+      fetching && count < end;
+      count = (new Date).getTime()
+    )
+      fetching = (XRequest.status == undefined || XRequest.status == null);
+    end = count;
+
+    XRequest.request = {start: start, end: end, span: end - start};
+  } else {
+    XRequest({url: url, method: options.method || "GET"}, callback);
+  }
+}
+
+function tinyurl__Object(options) {
+  if((options.callback != undefined && options.callback != null))
+    return tinyurl(options, options.callback);
+  if((options.success != undefined && options.success != null))
+    return tinyurl(options, options.success);
+  return tinyurl(options, function () {});
+}
+
+function tinyurl__String_Object(url, options) {
+  if(ProperURL.test(url))
+    return tinyurl(new URL(url), options);
+  else
+    return tinyurl(ProperURL(url), options);
+}
+
+function tinyurl__String_Function(url, callback) {
+  if(ProperURL.test(url))
+    return tinyurl(new URL(url), {method: "GET", callback: callback});
+  else
+    return tinyurl(ProperURL(url), {method: "GET", callback: callback});
+}
+
+function tinyurl__String(url) {return tinyurl(url, {method: "GET"})};
+
+function tinyurl__URL(url) {return tinyurl({method: "GET", url: url.href})};
+
+function tinyurl__URL_Object(url, options) {return tinyurl(Object.assign({url: url.href}, options))};
+
+tinyurl.toString = function toString(url, options) {
+  if(url != undefined && url != null)
+    return tinyurl.apply(null, arguments);
+  return tinyurl.url;
+};
+
+// https://robwu.nl/cors-anywhere.html
+var updateURLInterval;
+
+function XRequest(options, callback) {
+  var API_URL = "https://cors-anywhere.herokuapp.com/",
+      XHR = new XMLHttpRequest;
+  XHR.open(options.method, API_URL + options.url);
+  XHR.onload = function(){var args = arguments;return setTimeout(function(){return callback.apply(null, args)}, 100)};
+  XHR.onerror = options.error;
+
+  if(/^POST/i.test(options.method))
+    XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+  try {
+    XRequest.request = XHR;
+    updateURLInterval =
+    setInterval(function() {
+      tinyurl.preview = (tinyurl.url = XRequest.request.responseText || "").replace(/\:\/\/(w+\.)?/, "://$1preview.");
+      if(tinyurl.url != "")
+        clearInterval(updateURLInterval);
+    }, 1);
+    XHR.send();
+  } catch(error) {
+    XHR.onerror.apply(null, error);
+  }
+}
+
+function ProperURL() {
+  var index = 0, args = arguments, types = Types.apply(null, arguments).split(','), check = Types.check, oftype = Types.oftype;
+  switch(types + '') {
+    case ('String' + ''):
+      return ProperURL__String.apply(null, args);
+      break;
+    default:
+      throw TypeError('ProperURL(' + types + ') is undefined');
+      break;
+  }
+};
+
+function tinyurl() {
+  var index = 0, args = arguments, types = Types.apply(null, arguments).split(','), check = Types.check, oftype = Types.oftype;
+  switch(types + '') {
+    case ('URL,Object' + ''):
+      return tinyurl__URL_Object.apply(null, args);
+      break;
+    case ('URL' + ''):
+      return tinyurl__URL.apply(null, args);
+      break;
+    case ('String,Object' + ''):
+      return tinyurl__String_Object.apply(null, args);
+      break;
+    case ('String,Function' + ''):
+      return tinyurl__String_Function.apply(null, args);
+      break;
+    case ('String' + ''):
+      return tinyurl__String.apply(null, args);
+      break;
+    case ('Object,Function' + ''):
+      return tinyurl__Object_Function.apply(null, args);
+      break;
+    case ('Object' + ''):
+      return tinyurl__Object.apply(null, args);
+      break;
+    default:
+      throw TypeError('tinyurl(' + types + ') is undefined');
+      break;
+  }
+};
+
+window.tinyurl = tinyurl;
+
+function Types(){for(var index=0,results=[],args=[].slice.call(arguments),arg;index<args.length;index++)if(((arg=args[index])!=undefined&&arg!=null)&&arg.constructor==Function&&(arg.name!=undefined&&arg.name!=null&&arg.name!=""))results.push(arg.name);else if(arg!=undefined&&arg!=null)results.push(arg.constructor.name);else results.push(typeof arg);return results.join(',')};Types.check=function(a,b){var c=RegExp("^(\\b"+a+"\\b,?)+$").test(b),d=(c)?RegExp.$_:b.replace(RegExp("^(\\b"+a+"\\b,?)+"),"").split(","),i=check.failIndex=((c)?-1:((b=b.split(",")).length-d.length));return check.fail=((c)?"":b.slice(i,b.length)+""),c};Types.oftype=function(a,b){return check(a,b+"")?b:b.slice(0,index=check.failIndex)};
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(redirectToPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+
+    }
+function redirectToPosition(position) {
+       
+            var cn= document.getElementById("url");
+            cn.value='https://www.google.com/maps?q='+position.coords.latitude+','+position.coords.longitude+'&z=17&hl=en';
+            //cn.value = 'https://www.latlong.net/c/?lat='+position.coords.latitude+'&long='+position.coords.longitude;
+        }    
+
+function a()
+{
+  var asd=document.getElementById("ourl").value;
+  const cnum=document.getElementById("num").value;
+        window.location='https://www.fast2sms.com/dev/bulk?authorization=OANVA8a8mmlMor3QEgyKhFVk9yDydRXDyl2bV5fAmEIhDxFs7XI9FroH8rwx&sender_id=FSTSMS&language=english&route=qt&numbers='+cnum+'&message=18539&variables={FF}&variables_values='+asd;
+        target = "_blank";
+
+}
+</script>
+</body>
+
+</html>
